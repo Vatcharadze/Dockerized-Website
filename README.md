@@ -29,6 +29,9 @@ The project was:
 ## 📁 Project Structure
 
 dockerized-website/
+
 ├── index.html
+
 ├── Dockerfile
+
 └── README.md
