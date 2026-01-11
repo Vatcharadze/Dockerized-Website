@@ -1,11 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dockerized Website</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --primary: #0db7ed;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, #020617, #0f172a);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: auto;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: linear-gradient(160deg, #020617, var(--card));
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 60px rgba(13, 183, 237, 0.15);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: var(--primary);
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: rgba(13, 183, 237, 0.15);
+      color: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    footer span {
+      color: var(--primary);
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Hello from Docker!</h1>
-  <p>This website is running inside a Docker container.</p>
+
+  <header>
+    <h1>Dockerized Website</h1>
+    <p>
+      A lightweight, container-ready static website built for DevOps demos,
+      CI/CD pipelines, and Docker deployments.
+    </p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>🚢 Docker Ready</h2>
+      <p>
+        Designed to run perfectly inside a Docker container using Nginx or Apache.
+        No backend required — simple, fast, and portable.
+      </p>
+      <span class="badge">Docker</span>
+    </div>
+
+    <div class="card">
+      <h2>⚙️ DevOps Friendly</h2>
+      <p>
+        Ideal for CI/CD pipelines, GitHub Actions, GitLab CI, or Azure DevOps.
+        Build once, deploy everywhere.
+      </p>
+      <span class="badge">CI/CD</span>
+    </div>
+
+    <div class="card">
+      <h2>📦 Lightweight</h2>
+      <p>
+        Pure HTML and CSS. No frameworks, no dependencies, ultra-fast load times
+        and minimal container size.
+      </p>
+      <span class="badge">Static</span>
+    </div>
+
+    <div class="card">
+      <h2>🔐 Production Ready</h2>
+      <p>
+        Clean structure, responsive layout, and modern design suitable for
+        staging and production environments.
+      </p>
+      <span class="badge">Production</span>
+    </div>
+  </main>
+
+  <footer>
+    Built with <span>Docker</span> • Powered by DevOps Principles
+  </footer>
+
 </body>
 </html>
 
