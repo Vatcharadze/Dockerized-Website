@@ -25,13 +25,3 @@ The project was:
 - **Linux**
 
 ---
-
-## 📁 Project Structure
-
-dockerized-website/
-
-├── index.html
-
-├── Dockerfile
-
-└── README.md
