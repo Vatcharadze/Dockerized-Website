@@ -2,7 +2,9 @@ version: "3.9"
 
 services:
   web:
-    build: .
+    build:
+      context: ..
+      dockerfile: Docker/Dockerfile
     container_name: nginx-website
     ports:
       - "8080:80"
